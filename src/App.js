@@ -3,16 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+   constructor(props) {
+      super(props);
+      this.state = {
+        url: window.location.host,
+      };
+    }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Hello world!</h1>
+        <header>
+          <h1>Hello world! {this.state.url.split(".")[0]}</h1>
         </header>
-        <p className="App-intro">
-          Looks like you're all set!
-        </p>
       </div>
     );
   }
