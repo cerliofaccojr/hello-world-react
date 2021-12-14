@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1>Hello world! {this.state.url.split(".")[0]}</h1>
+          <h1>Subdomínio: {this.state.url.split(".")[0]}</h1>
         </header>
       </div>
     );
